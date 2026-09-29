@@ -4,6 +4,8 @@ Proof of concept of a Security Operations Center for **MedCare**, a fictitious h
  
 Built in **EVE-NG** as a university project (cybersecurity implementation). The written proposal uses a full Cisco stack (Secure Firewall, Splunk Enterprise + SOAR, Talos). In the lab, the firewall is **pfSense with Snort** instead of a Cisco ASA, because of bandwidth limitations in the virtualized environment.
 
+![SOC Dashboard](images/dashboard.png)
+
 ---
  
 ## Topology
