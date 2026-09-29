@@ -21,6 +21,18 @@ Built in **EVE-NG** as a university project (cybersecurity implementation). The 
  
 ---
 
+## Use Cases
+ 
+| # | Attack | Tool | Detection source | Automated response |
+|---|---|---|---|---|
+| 1 | RDP brute force | Hydra | Windows Security logs (failed logons) | Block source IP on pfSense |
+| 2 | Port scan | Nmap | Snort `sfPortscan` | Block source IP on pfSense |
+| 3 | Web vulnerability scan | Nikto | IIS logs | Block source IP on pfSense |
+| 4 | SQL Server brute force (internal) | Hydra | SQL Server failed logins (EventCode 18456) | Shut down the attacker's switch port |
+| 5 | SQL injection | sqlmap | Snort ET SQLi rules | Block source IP on pfSense |
+ 
+---
+
 ## Automated Response
  
 Snort runs in **IDS mode**: it only detects and sends alerts to Splunk. All blocking decisions are made centrally by the SIEM through custom alert actions.
